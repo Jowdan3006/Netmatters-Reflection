@@ -1,0 +1,124 @@
+header {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1500;
+}
+
+.header-wrap {
+    position: sticky;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0;
+    z-index: 1250;
+    background-color: #fff;
+    .header-top-nav {
+        max-width: 750px;
+        box-sizing: border-box;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr repeat(2, min-content);
+        height: 110px;
+        width: 100%;
+        min-height: fit-content;
+        padding: 0 $size-n;
+        justify-items: start;
+        align-items: center;
+        margin: auto;
+        img {
+            object-fit: cover;
+            width: 100%;
+            min-width: 100%;
+            max-width: max-content;
+        }
+        .fa-phone-alt {
+            font-size: $size-xl;
+            margin: $size-n;
+            margin-right: $size-head-xl;
+        }
+    }
+}
+
+.ham {
+    width: 36px;
+    height: 3px;
+    margin: 0 auto calc(#{$size-xl} - 5%);
+    background-color: #fff;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 36px;
+        height: 3px;
+        top: -8px;
+        background-color: #fff;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: 36px;
+        height: 3px;
+        bottom: -8px;
+        background-color: #fff;
+    }
+}
+
+.nav-ham {
+    display: grid;
+    padding: $size-n $size-s $size-s;
+    line-height: 0;
+    background-color: $base-color;
+    &:hover {
+        background-color: darken($base-color, 10%)
+    }
+    color: #fff;
+    border-radius: 3px;
+    font-size: $size-s;
+    text-transform: uppercase;
+}
+
+.top-nav {
+    display: grid;
+    grid-gap: $size-xl;
+    .btn {
+        font-size: calc(#{$size-l} - 10%);
+        padding: $size-n;
+        padding-left: $size-head-xl;
+        position: relative;
+    }
+    i {
+        position: absolute;
+        color: #fff;
+        font-size: calc(#{$size-xl} - 10%);
+        left: $size-n;
+    }
+}
+
+.nav-support {
+    display: none;
+    background-color: #2a6ec6;
+    &:hover {
+        background-color: darken(#2a6ec6, 10%);
+    }
+}
+
+.nav-contact {
+    background-color: #84858f;
+    &:hover {
+        background-color: darken(#84858f, 10%);
+    }
+}
+
+.nav-support,
+.nav-contact {
+    display: none;
+}
+
+.nav-ham:active {
+    background-color: darken($base-color, 20%);
+    &::after {
+        content: '';
+    }
+}

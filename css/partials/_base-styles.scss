@@ -1,0 +1,64 @@
+* {
+    font-weight: 400;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: $size-n;
+}
+
+h1 {
+    font-size: $size-head-xl;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: calc(#{$size-head-l} - 10%);
+    letter-spacing: 0.1rem;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: $base-color;
+    font-weight: normal;
+    font-size: $size-l;
+}
+
+h4 {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+i {
+    color: $base-color;
+    font-size: $size-head-n;
+}
+
+p {
+    line-height: $size-xl;
+}
+
+a {    
+    text-decoration: none;
+    color: $base-color;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    color: #fff;
+}
+
+strong {
+    letter-spacing: 0.05rem;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

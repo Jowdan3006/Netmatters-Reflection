@@ -1,0 +1,42 @@
+.main-carousel {
+    display: flex;
+    height: 86.5vh;
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) , rgba(0,0,0,.2)), url("../img/main-carousel-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-left: $size-xs;
+    padding-right: $size-xs;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    border-top: 1px solid rgba(0,0,0,0.75);
+    margin-top: 13.5vh;
+}
+
+.car {
+    margin: auto $size-n;
+    color: #fff;
+    flex-basis: auto;
+    max-width: 940px;
+    p {
+        font-size: $size-l;
+        line-height: $size-head-l;
+    }
+    .btn {
+        margin-top: $size-l;
+        font-size: $size-l;
+        padding: $size-l;
+        background-color: #926FB1;
+        &:hover {
+            background-color: darken(#926FB1, 10%);
+        }
+        
+    }
+    i {
+        padding-left: $size-n;
+        font-size: $size-l;
+        color: #fff;
+    }
+}
+

@@ -1,0 +1,14 @@
+.btn {
+    padding: $size-s $size-l;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.tag {
+    padding: 5px $size-xs;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: $size-s;
+}

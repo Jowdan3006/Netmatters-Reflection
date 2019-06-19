@@ -1,0 +1,135 @@
+
+
+.news-header {
+    padding: 0 $size-n;
+    background-color: #fff;
+    box-shadow: 0 0 $size-head-n rgba(0,0,0,0.1);
+}
+
+.news-nav {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    height: fit-content;
+}
+
+.news-nav h3 {
+    display: inline-block;
+    position: relative;
+    padding: $size-head-l 0;
+    margin: 0 $size-n 0 0;
+    &::after {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        content: '';
+        border: 2.5px solid $base-color;
+        width: 100%;
+    }
+}
+
+.news-cards {
+    padding: $size-head-xl $size-n;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $size-head-n;
+    max-width: 1170px;
+    margin: auto;
+    height: fit-content;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: max-content;
+    position: relative;
+    z-index: 500;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    .thumb {
+        overflow: hidden;
+        img {
+            width: 100%;
+            background-color: #fff;
+            transition-duration: .3s;
+        }
+    }
+}
+
+@include depart-card ('web', 'it', 'mar');
+.card-body {
+    padding: $size-head-n;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    align-content: space-between;
+    justify-content: end;
+    hr {
+        margin: $size-head-n 0;
+    }
+}
+.card-info {
+    p {
+        font-size: $size-s;
+        color: $off-base-color;
+    }
+    a ~ p {
+        margin-bottom: $size-l;
+    }
+    a:first-child:hover{
+        text-decoration: underline;
+    }
+}
+
+.card-author {
+    font-size: 90%;
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto auto;
+    img {
+        border-radius: 50%;
+        grid-row: 1 / 3;
+        justify-self: center;
+        margin-right: $size-n;
+    }
+    p {
+        margin: 0;
+    }
+    p:last-child {
+        grid-column: 2;
+        color: $off-base-color;
+    }
+}
+.tag-info{
+    display: none;
+}
+.tag {
+    position: absolute;
+    top: $size-xxs;
+    right: 0;
+    &:hover {
+        text-decoration: underline;
+        .tag-info {
+            text-align: center;
+            display: block;
+            position: absolute;
+            right: -$size-s;
+            width: max-content;
+            bottom: $size-head-n;
+            background-color: $base-color;
+            padding: $size-xs $size-head-n;
+            text-transform: initial;
+
+        }
+    }
+}
+
+.tag-info::after {
+    display: block;
+    position: absolute;
+    right: $size-head-n;
+    bottom: -2px;
+    content: '';
+    transform: rotate(45deg);
+    width: $size-s;
+    height: $size-s;
+    background-color: $base-color;
+}

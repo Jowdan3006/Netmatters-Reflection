@@ -1,0 +1,93 @@
+.main-nav {
+    background-color: $base-color;
+    display: none;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    grid-gap: 2px;
+    padding: 0 $size-head-l;
+    font-size: $size-xs;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 110px;
+    a {
+        display: inline-block;
+        color: #fff;
+        margin: auto;
+    }
+    .nav-pa {
+        width: 100%;
+        border-right: 1px solid rgba(255,255,255,0.1);
+        border-left: 1px solid rgba(0,0,0,0.25);
+    }
+    i {
+        font-size: $size-l;
+        display: block;
+        margin-top: $size-l;
+        margin-bottom: $size-xs;
+    }
+    h4 {
+        margin-top: 0;
+        margin-bottom: $size-n;
+        font-size: $size-l;
+    }
+}
+
+.sub {
+    box-sizing: border-box;
+    text-align: start;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $size-head-xl;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(10, max-content);
+    a {
+        box-sizing: border-box;
+        height: 100%;
+        padding: $size-s 0;
+    }
+    p {
+        font-size: $size-s;
+        margin: 0;
+        padding: 0 0 0 $size-n;
+    }
+    a:first-child {
+        p {
+            padding-left: 0;
+        }
+    }
+}
+.sub {
+    display: none;
+    p {
+        &:after {
+            display: inline-block;
+            content: '';
+            width: $size-xxs;
+            height: 1px;
+            background-color: #fff;
+            margin-left: $size-n;
+            margin-bottom: 4px;
+        }
+    }
+    a:last-child {
+        p {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.nav-pa {
+    &:hover {
+        .sub {
+            display: grid;
+        }
+    }
+}
+
+
+@include depart-nav;
