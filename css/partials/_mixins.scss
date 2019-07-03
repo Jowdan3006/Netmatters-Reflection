@@ -27,30 +27,40 @@
     }
 }
 
-//sets color for the 3 selected departments based changes in the cards section. requires 3 inputs, currently through CSS, will change to html for easier editing.
-@mixin depart-card ($dep-first, $dep-second, $dep-third) {
-    $dep-multi: (
-        'first' : $dep-first,
-        'second' : $dep-second,
-        'third' : $dep-third
-    );
-    @each $num, $dep in $dep-multi {
-        .#{$num}-card {
+//sets color for all department based changes in the cards section.
+@mixin depart-card {
+    @each $dep, $val in $departments {
+        .#{$dep}-card {
             .tag,
             .btn {
-                background-color: map-get($departments, $dep);
+                background-color: $val;
             }
             .btn:hover {
-                background-color: darken(map-get($departments, $dep), 10%)
+                background-color: darken($val, 10%)
             }
             a.card-head {
-                color: map-get($departments, $dep);
+                color: $val;
             }
         }
     }
 }
 
-//changes color for all departments in the navigaion.
+//sets color for all department based changes in the carousel.
+@mixin depart-carousel {
+    @each $dep, $val in $departments {
+        .car-#{$dep} {
+            .btn {
+                background-color: $val;
+            }
+            .btn:hover {
+                background-color: darken($val, 10%)
+            }
+        }
+    }
+}
+
+
+//changes color for all departments in the navigation.
 @mixin depart-nav {
     @each $dep, $val in $departments {
         .nav-#{$dep} {

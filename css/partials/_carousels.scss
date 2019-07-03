@@ -14,6 +14,7 @@
     margin-top: 13.5vh;
 }
 
+@include depart-carousel;
 .car {
     margin: auto $size-n;
     color: #fff;
@@ -27,16 +28,56 @@
         margin-top: $size-l;
         font-size: $size-l;
         padding: $size-l;
-        background-color: #926FB1;
-        &:hover {
-            background-color: darken(#926FB1, 10%);
-        }
+        // background-color: #926FB1;
+        // &:hover {
+        //     background-color: darken(#926FB1, 10%);
+        // }
         
     }
     i {
         padding-left: $size-n;
         font-size: $size-l;
         color: #fff;
+    }
+}
+
+
+.slick-initialized .slick-slide {
+    display: grid;
+    justify-content: center;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 5%;
+    li {
+        button {
+            position: relative;
+        }
+        button::before {
+            content: "";
+            left: 2px;
+            top: 1px;
+            width: 16px;
+            height:16px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+    }
+    li.slick-active {
+        button::before {
+            color: #fff;
+        }
+        button::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -15%;
+            right: -10%;
+            width: $size-l;
+            height: $size-l;
+            border: solid 2px rgba($color: #fff, $alpha: .75);
+            border-radius: 50%;
+        }
     }
 }
 

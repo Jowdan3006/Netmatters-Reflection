@@ -55,7 +55,7 @@
     }
 }
 
-@include depart-card ('web', 'it', 'mar');
+@include depart-card;
 .card-body {
     padding: $size-head-n;
     display: grid;
