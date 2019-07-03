@@ -1,9 +1,9 @@
 header {
     background-color: #fff;
-    width: 100%;
     position: fixed;
     top: 0;
     z-index: 1500;
+    width: 100%;
 }
 
 .header-wrap {
@@ -53,6 +53,7 @@ header {
         width: 36px;
         height: 3px;
         top: -8px;
+        left: 0;
         background-color: #fff;
     }
     &::before {
@@ -61,15 +62,18 @@ header {
         width: 36px;
         height: 3px;
         bottom: -8px;
+        left:0;
         background-color: #fff;
     }
 }
 
-.nav-ham {
-    display: grid;
+#nav-ham {
+    display: none;
     padding: $size-n $size-s $size-s;
     line-height: 0;
     background-color: $base-color;
+    border: none;
+    cursor: pointer;
     &:hover {
         background-color: darken($base-color, 10%)
     }

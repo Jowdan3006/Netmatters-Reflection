@@ -10,16 +10,24 @@
     text-transform: uppercase;
     position: relative;
     margin-top: 110px;
+    .nav-pa {
+        width: 100%;
+        border-right: 1px solid rgba(255,255,255,0.1);
+        border-left: 1px solid rgba(0,0,0,0.25);
+        &:hover {
+            .sub {
+                display: grid;
+            }
+        }
+    }
+}
+.nav-pa {
     a {
         display: inline-block;
         color: #fff;
         margin: auto;
     }
-    .nav-pa {
-        width: 100%;
-        border-right: 1px solid rgba(255,255,255,0.1);
-        border-left: 1px solid rgba(0,0,0,0.25);
-    }
+    
     i {
         font-size: $size-l;
         display: block;
@@ -34,13 +42,12 @@
 }
 
 .sub {
+    display: none;
     box-sizing: border-box;
-    text-align: start;
     position: absolute;
     left: 0;
     width: 100%;
     height: $size-head-xl;
-    display: grid;
     justify-content: center;
     grid-template-columns: repeat(10, max-content);
     a {
@@ -52,16 +59,6 @@
         font-size: $size-s;
         margin: 0;
         padding: 0 0 0 $size-n;
-    }
-    a:first-child {
-        p {
-            padding-left: 0;
-        }
-    }
-}
-.sub {
-    display: none;
-    p {
         &:after {
             display: inline-block;
             content: '';
@@ -70,6 +67,11 @@
             background-color: #fff;
             margin-left: $size-n;
             margin-bottom: 4px;
+        }
+    }
+    a:first-child {
+        p {
+            padding-left: 0;
         }
     }
     a:last-child {
@@ -81,13 +83,7 @@
     }
 }
 
-.nav-pa {
-    &:hover {
-        .sub {
-            display: grid;
-        }
-    }
-}
+
 
 
 @include depart-nav;

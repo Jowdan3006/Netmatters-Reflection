@@ -1,8 +1,8 @@
 @media only screen and (min-width: 376px) {
     main {
         .main-carousel {
-            height: 88.5vh;
-            margin-top: calc(11.5vh + 1px);
+            height: calc(100vh - 110px);
+            margin-top: 110px;
         }
     }
 }
