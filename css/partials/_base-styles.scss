@@ -56,9 +56,3 @@ ul {
 strong {
     letter-spacing: 0.05rem;
 }
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
