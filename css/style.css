@@ -59,12 +59,6 @@ strong {
   letter-spacing: 0.05rem;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .btn {
   padding: 0.8rem 1.25rem;
   color: #fff;
@@ -450,6 +444,54 @@ header {
   margin-top: 13.5vh;
 }
 
+.car-web .btn {
+  background-color: #926FB1;
+}
+
+.car-web .btn:hover {
+  background-color: #79539a;
+}
+
+.car-it .btn {
+  background-color: #4183D7;
+}
+
+.car-it .btn:hover {
+  background-color: #286abd;
+}
+
+.car-tel .btn {
+  background-color: #D64541;
+}
+
+.car-tel .btn:hover {
+  background-color: #bc2c28;
+}
+
+.car-sof .btn {
+  background-color: #67809F;
+}
+
+.car-sof .btn:hover {
+  background-color: #526781;
+}
+
+.car-mar .btn {
+  background-color: #2ECC71;
+}
+
+.car-mar .btn:hover {
+  background-color: #25a25a;
+}
+
+.car-sec .btn {
+  background-color: #F62459;
+}
+
+.car-sec .btn:hover {
+  background-color: #de093f;
+}
+
 .car {
   margin: auto 1rem;
   color: #fff;
@@ -467,17 +509,55 @@ header {
   margin-top: 1.25rem;
   font-size: 1.25rem;
   padding: 1.25rem;
-  background-color: #926FB1;
-}
-
-.car .btn:hover {
-  background-color: #79539a;
 }
 
 .car i {
   padding-left: 1rem;
   font-size: 1.25rem;
   color: #fff;
+}
+
+.slick-initialized .slick-slide {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 5%;
+}
+
+.slick-dots li button {
+  position: relative;
+}
+
+.slick-dots li button::before {
+  content: "";
+  left: 2px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #fff;
+}
+
+.slick-dots li.slick-active button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: solid 2px rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
 }
 
 .main-body {
@@ -798,43 +878,82 @@ header {
           transition-duration: .3s;
 }
 
-.first-card .tag,
-.first-card .btn {
+.web-card .tag,
+.web-card .btn {
   background-color: #926FB1;
 }
 
-.first-card .btn:hover {
+.web-card .btn:hover {
   background-color: #79539a;
 }
 
-.first-card a.card-head {
+.web-card a.card-head {
   color: #926FB1;
 }
 
-.second-card .tag,
-.second-card .btn {
+.it-card .tag,
+.it-card .btn {
   background-color: #4183D7;
 }
 
-.second-card .btn:hover {
+.it-card .btn:hover {
   background-color: #286abd;
 }
 
-.second-card a.card-head {
+.it-card a.card-head {
   color: #4183D7;
 }
 
-.third-card .tag,
-.third-card .btn {
+.tel-card .tag,
+.tel-card .btn {
+  background-color: #D64541;
+}
+
+.tel-card .btn:hover {
+  background-color: #bc2c28;
+}
+
+.tel-card a.card-head {
+  color: #D64541;
+}
+
+.sof-card .tag,
+.sof-card .btn {
+  background-color: #67809F;
+}
+
+.sof-card .btn:hover {
+  background-color: #526781;
+}
+
+.sof-card a.card-head {
+  color: #67809F;
+}
+
+.mar-card .tag,
+.mar-card .btn {
   background-color: #2ECC71;
 }
 
-.third-card .btn:hover {
+.mar-card .btn:hover {
   background-color: #25a25a;
 }
 
-.third-card a.card-head {
+.mar-card a.card-head {
   color: #2ECC71;
+}
+
+.sec-card .tag,
+.sec-card .btn {
+  background-color: #F62459;
+}
+
+.sec-card .btn:hover {
+  background-color: #de093f;
+}
+
+.sec-card a.card-head {
+  color: #F62459;
 }
 
 .card-body {
@@ -1096,7 +1215,7 @@ a:hover.linkedin {
     margin-right: auto;
   }
   .main-carousel .car {
-    width: 100%;
+    width: 100vw;
     margin: auto;
   }
   .news-cards {
@@ -1168,12 +1287,10 @@ a:hover.linkedin {
   main .main-carousel p {
     max-width: 400px;
     margin-left: 0;
-    margin-right: 0;
   }
   main .main-carousel .car {
     max-width: 960px;
-    width: 100%;
-    margin: auto;
+    margin-left: 1rem;
   }
   .main-services {
     -ms-grid-columns: 450px 450px;
