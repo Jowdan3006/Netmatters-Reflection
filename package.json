@@ -1,0 +1,24 @@
+{
+  "name": "netmatters-reflection",
+  "version": "1.0.0",
+  "description": "A reflection of the Netmatters.co.uk site",
+  "main": "index.html",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jowdan3006/Netmatters-Reflection.git"
+  },
+  "author": "Jordan Ambridge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jowdan3006/Netmatters-Reflection/issues"
+  },
+  "homepage": "https://github.com/Jowdan3006/Netmatters-Reflection#readme"
+}
