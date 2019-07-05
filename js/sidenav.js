@@ -124,17 +124,17 @@ if (getCookie('username') === null) {
     });
 };
 
-if (getCookie('username') != null) {
+// if (getCookie('username') != null) {
 
-    // ---- display popup if cookie is detected for testing -------------- //
+//     // ---- display popup if cookie is detected for testing -------------- //
 
-    $('.my-cookie').html('<div class="cookie-wrap"><p>Eat your cookie? <button class="cookie-okay">Okay</button></p></div>');
-    $('.my-cookie').css({display: 'block', visibility: 'visible'}).animate({
-        opacity: '1.0',
-    }, {
-        duration: 1000
-    });
-};
+//     $('.my-cookie').html('<div class="cookie-wrap"><p>Eat your cookie? <button class="cookie-okay">Okay</button></p></div>');
+//     $('.my-cookie').css({display: 'block', visibility: 'visible'}).animate({
+//         opacity: '1.0',
+//     }, {
+//         duration: 1000
+//     });
+// };
 
 $('.cookie-okay').on('click', () => {
     if (getCookie('username') === null) {
