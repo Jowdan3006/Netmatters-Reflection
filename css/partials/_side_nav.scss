@@ -1,27 +1,119 @@
 .side-nav {
+    .sd-mobile {
+        padding: $size-n;
+    }
     position: fixed;
+    box-sizing: border-box;
     width: 275px;
     right: 0;
     top: 0;
     height: 100vh;
     background-color: $base-color;
-    overflow-y: scroll;
-    .nav-pa {
-        margin: $size-n;
-        border: 1px solid rgba(0,0,0,0.25);
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
-        border-radius: 3px;
-        text-align: center;
+    overflow-y: auto;
+    * {color: #fff;} // temp // temp // temp // temp // temp // temp // temp
+    .sd-nav,
+    .sd-con {
         a {
-            width: 100%;
-            font-size: $size-s;
+            border: 1px solid rgba(0,0,0,0.25);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+            border-radius: 5px;
+            font-size: $size-xs;
+            margin-bottom: $size-n;
+            i {
+                font-size: $size-l;
+                display: block;
+                margin-bottom: $size-xs;
+                margin-top: $size-xl;
+            }
         }
-        h4:not(.nav-con) {
+        h4 {
             margin-top: 4px;
+            font-size: $size-l;
+        }
+    }
+    .sd-con {
+        h4 {
+            margin-top: $size-xl;
+            
+        }
+        &:hover {
+            background-color: darken($base-color, 5%)
         }
     }
 }
 
-.nav-con {
-    margin-top: $size-l;
+.sd-sub {
+    background-color: darken($base-color, 5%);
+    border-radius: 4px;
+    margin-bottom: $size-n;
+    a {
+        padding: $size-xxs;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        border-top: 1px solid rgba(255,255,255,0.1);
+        &:last-child {
+            border-bottom: none;
+        }
+        &:first-child {
+            border-top: none;
+        }
+        p {
+            margin: 0;
+        }
+    }
 }
+
+.sd-nav,
+.sd-sub,
+.sd-con,
+.sd-list,
+.sd-head {
+    text-transform: uppercase;
+    a {
+        text-align: center;
+        display: block;
+    }
+}
+
+.sd-full {
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    border-top: 1px solid rgba(0,0,0,0.25);
+    .sd-head {
+        h4 {
+            padding-left: $size-n;
+            margin: $size-n 0 calc(#{$size-n} - 2px) 0;
+            text-align: left;
+            font-size: $size-n;
+        }
+        &:hover {
+            background-color: lighten($base-color, 10%);
+        }
+    }
+    .sd-list {
+        a {
+            text-align: left;
+            background-color: darken($base-color, 5%);
+            padding: $size-n 0 calc(#{$size-n} - 2px) $size-n;
+            font-size: $size-s;
+            &::before {
+                content: '\00BB';
+                font-size: $size-n;
+                color: #fff;
+                padding-right: $size-n;
+            }
+        }
+    }
+    .sd-list,
+    .sd-head {
+        a {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.25);
+        }
+    }
+}
+
+.full-hov {
+    background-color: lighten($base-color, 10%);
+}
+
+@include depart-sidenav;
