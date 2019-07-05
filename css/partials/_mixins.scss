@@ -59,7 +59,6 @@
     }
 }
 
-
 //changes color for all departments in the navigation.
 @mixin depart-nav {
     @each $dep, $val in $departments {
@@ -76,6 +75,36 @@
         }
         .sub-#{$dep} {
             background-color: darken($val, 10%);
+        }
+    }
+}
+
+//changes color for all departments in the side navigation.
+@mixin depart-sidenav {
+    @each $dep, $val in $departments {
+        .sd-nav.sd-#{$dep} {
+            i {
+                color: $val;
+            }
+            &:hover {
+                background-color: $val;
+                i {
+                    color: #fff;
+                }
+                + .sd-sub {
+                    box-shadow: 0px 0px 2px 2px rgba($val, .25);
+                }
+            }
+            
+        }
+        .sd-sub.sd-#{$dep} a:hover,
+        .#{$dep}-hov {
+            background-color: darken($val, 15%);
+        }
+        .sd-nav.#{$dep}-hov {
+            i {
+                color: #fff;
+            }
         }
     }
 }
