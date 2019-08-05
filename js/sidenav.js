@@ -7,7 +7,7 @@ const depart = [
     'sec'
 ];
 for (let dep of depart) {
-  $(`.carousel-${dep}`).css({backgroundImage: `linear-gradient(90deg, rgba(0,0,0,.9) , rgba(0,0,0,.2) 70%, rgba(0,0,0,0)), url(../img/main-carousel-${dep}.jpg`})
+  $(`.carousel-${dep}`).css({backgroundImage: `linear-gradient(90deg, rgba(0,0,0,.9) , rgba(0,0,0,.2) 70%, rgba(0,0,0,0)), url(img/main-carousel-${dep}.jpg`})
 }
 
 // ---- input nav menu from existing desktop navigation ------------------ //
